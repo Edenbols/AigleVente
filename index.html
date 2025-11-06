@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aigle Vente</title>
+  <style>
+    /* ---------- STYLE GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #f1f1f1;
+      overflow-x: hidden;
+    }
+
+    /* ---------- VIDÉO DE FOND ---------- */
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(45%) blur(2px);
+      z-index: -2;
+    }
+
+    /* ---------- IMAGE DE SECOURS ---------- */
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(45%) blur(2px);
+      z-index: -3;
+    }
+
+    /* ---------- EN-TÊTE ---------- */
+    header {
+      text-align: center;
+      padding: 5rem 1rem 2rem;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ffd65a;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ddd;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem 5rem;
+    }
+
+    section {
+      background: rgba(25, 25, 25, 0.8);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      animation: fadeUp 1s ease forwards;
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    section h2 {
+      color: #ffd65a;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* ---------- PROJETS ---------- */
+    .projects a {
+      display: block;
+      color: #f1f1f1;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0.6rem 0;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .projects a:hover {
+      color: #ffd65a;
+    }
+
+    /* ---------- PDF ---------- */
+    .pdf-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 2rem;
+      background: #ffd65a;
+      color: #000;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .pdf-button:hover {
+      background: #fff;
+      transform: scale(1.05);
+    }
+
+    /* ---------- PIED DE PAGE ---------- */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      background: rgba(20, 20, 20, 0.8);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      backdrop-filter: blur(5px);
+    }
+
+    /* ---------- ANIMATIONS ---------- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      main { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- FOND VIDÉO -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="https://cdn.coverr.co/videos/coverr-working-on-a-laptop-2164/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="background-image"></div>
+
+  <!-- EN-TÊTE -->
+  <header>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px;">
+  <img src="aigle.png" alt="Logo Aigle Vente" style="height:60px;">
+  <h1 style="color: white; font-size: 2.5rem; font-weight: bold;">Aigle Vente</h1>
+</div>
+
+    <p>Des projets modernes, des solutions intelligentes et une vision tournée vers l’avenir.</p>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <section class="projects">
+      <h2>QUI SOMMES NOUS</h2>
+      <a href="#">AigleVente.com est une plateforme moderne qui facilite l’achat et la vente en ligne. Simple, rapide et sécurisée, elle permet à tous — particuliers comme professionnels — de publier, rechercher et conclure des transactions facilement. Un site clair, pratique et accessible sur ordinateur comme sur mobile.
+</a>
+
+    </section>
+
+    <section>
+      <h2>Présentation Vidéo</h2>
+	  <iframe 
+	  width="100%" 
+	  height="400" 
+	  src="https://www.youtube.com/embed/tPJdwyFO7Pw?si=LV5QO1Y-9UdAAYCV" 
+	  title="Presentation de Aigle Vente" 
+	  frameborder="0" 
+	  allow="accelerometer;
+	  autoplay; 
+	  clipboard-write; 
+	  encrypted-media; 
+	  gyroscope; 
+	  picture-in-picture; 
+	  web-share" 
+	  referrerpolicy="strict-origin-when-cross-origin" 
+	  allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>Document PDF</h2>
+      <iframe src="presentation.pdf" width="100%" height="400" style="border:none; border-radius:12px;"></iframe>
+      <br />
+      <a class="pdf-button" href="presentation.pdf" target="_blank">📄 Voir / Télécharger le PDF</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Aigle Vente — Tous droits réservés
+  </footer>
+</body>
+</html>
